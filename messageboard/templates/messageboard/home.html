@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<div class = "main">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="list">
+            author: <input type="text" name="author" placeholder="author">
+            </textarea><br/>
+            message: <input type="text" name="message" placeholder="submit message">
+            </textarea><br/>
+            <input type="submit" value="Post"/>
+        </div>
+    </form>
+</div>
+
+<div class = 'messages'>
+    {% for message in messages %}
+    <div class = "board">
+    <div style="width:300px;height:60px;border:.5px solid #000;">
+        <h6 style = "margin-bottom: 0">{{ message.message }}</h6>
+        <h6 style=" margin-top: 0" >{{ message.author }}</h6>
+    </div>
+
+
+    {% endfor %}
+    </div>
+</div>
+
+</html>
+
+<style type="text/css">
+	.list {
+		margin: 0 auto;
+		width: 210px;
+	}
+
+	.list label{
+		display: inline-block;
+		text-align: right;
+        float: left
+	}
+
+	
+
+    .list button {
+        display: inline-block;
+        text-align: right;
+        float: left
+    }
+
+    .board {
+        margin: 0 auto;
+        margin-top: 1%;
+        float: left
+    }
+    
+    
+</style>
+
+
+
+
+<!--
+
+{% for message in messages %}
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">List group item heading</h5>
+        <small>3 days ago</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small>And some small print.</small>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">List group item heading</h5>
+        <small class="text-muted">3 days ago</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small class="text-muted">And some muted small print.</small>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">List group item heading</h5>
+        <small class="text-muted">3 days ago</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small class="text-muted">And some muted small print.</small>
+    </a>
+  </div>
+{% endfor %}
+  
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">sdf</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+
+-->

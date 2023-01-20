@@ -1,0 +1,21 @@
+[
+    {
+        "model": "messageboard.message",
+        "pk": 1,
+        "fields": {
+            "message": "Hello, World!",
+            "author": "computer",
+            "created_at": "2023-01-10T15:26:45.341Z",
+            "updated_at": "2023-01-10T15:26:45.341Z"
+        }
+    },
+    {
+        "model": "messageboard.message",
+        "pk": 2,
+        "fields": {
+            "message": "poopy!",
+            "created_at": "2023-01-10T15:26:45.341Z",
+            "updated_at": "2023-01-10T15:26:45.341Z"
+        }
+    }
+]
