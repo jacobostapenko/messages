@@ -43,15 +43,20 @@ ALTER ROLE admin SET timezone TO 'UTC';
 ```
 and then leave via `exit`.
 
+Remember to create an admin user by running the following command:
+./manage.py createsuperuser
+it will ask for a username and password that you will need to remember to access django admin.
+
+
+Once running:
 To clear the database from previous messages, run 
 
 ./manage.py flush
 
 
-
 To udpate the db / migrate before you run the server:
 
-open up a shell, and go into your virtual environment. Change directories to end up in the recipe-app dir. Run the commands below:
+open up a shell, and go into your virtual environment. Change directories to end up in the messageboard directory. Run the commands below:
 
 ./manage.py makemigration
 
@@ -66,7 +71,6 @@ to launch:
 1. cd to app dir
 2. run in console: $ python ./manage.py runserver
 
-itll run locally
 
 admin user creds:
 username: user1 password: password
